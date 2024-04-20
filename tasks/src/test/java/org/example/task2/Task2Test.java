@@ -63,7 +63,7 @@ class Task2Test {
     }
 
     @Test
-    @DisplayName("generate 100 dots inside circle")
+    @DisplayName("generate 100 dots outside of circle")
     void dotsOutCircle() {
         Random random = new Random(0);
         Task2 task2 = new Task2();
