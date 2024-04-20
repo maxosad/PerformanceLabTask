@@ -62,42 +62,6 @@ class Task2Test {
         }
     }
 
-
-//    @Test
-//    @DisplayName("generate 100 dots on circle")
-//    void dotsOnCircle() {
-//        Random random = new Random(0);
-//        Task2 task2 = new Task2();
-//        double radius = random.nextDouble(3, 1e38);
-//        double centerX = random.nextDouble(3, 1e38);
-//        double centerY = random.nextDouble(3, 1e38);
-//        double angle, x, y, distance ;
-//        int result;
-//
-//
-//        double twoPI = 2 * Math.PI;
-//        for (int i = 0; i < 100; i++) {
-//            angle = random.nextDouble(0, twoPI);
-//            x = centerX + Math.cos(angle) * radius;
-//            System.out.println("\nwertewr1\n");
-//            System.out.println(centerX);
-//            System.out.println(x);
-//            System.out.println("\nwertewr\n");
-//            y = centerY + Math.sin(angle) * radius;
-//
-//
-//            distance = task2.distanceBetweenDots(centerX, centerY, x, y);
-//            result = task2.positionCode(distance, radius);
-//            if (result == 1) {
-//
-//
-//                System.out.println(distance);
-//                System.out.println(radius);
-//            }
-//            assertEquals(0, result);
-//        }
-//    }
-
     @Test
     @DisplayName("generate 100 dots inside circle")
     void dotsOutCircle() {
