@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Random;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,12 +43,33 @@ class Task2Test {
 
 
     @Test
-    @DisplayName("generate 100 dots in circle")
-    void dotsInCircle(double expected, double x1, double y1, double x2, double y2) {
+    @DisplayName("generate 100 dots inside circle")
+    void dotsInCircle() {
+        Random random = new Random(0);
         Task2 task2 = new Task2();
+        double radius = random.nextDouble(3, 1e38);
+        double centerX = random.nextDouble(3, 1e38);
+        double centerY = random.nextDouble(3, 1e38);
+        double x, y;
 
-        var result = task2.distanceBetweenDots(x1, y1, x2, y2);
 
-        assertEquals(expected, result);
+        for (int i = 0; i < 100; i++) {
+            x = centerX + random.nextDouble(1, Math.sqrt(radius) - 1);
+            y = centerY + random.nextDouble(1, Math.sqrt(radius) - 1);
+
+            var result = task2.positionCode(task2.distanceBetweenDots(centerX, centerY, x, y), radius);
+            if (result == 2) {
+                System.out.println(centerX);
+                System.out.println(centerY);
+                System.out.println(radius);
+                System.out.println(x);
+                System.out.println(y);
+
+            }
+            assertEquals(1, result);
+        }
     }
+
+
+
 }
