@@ -5,6 +5,13 @@ import java.util.stream.Collectors;
 
 public class Task1 {
     public String countPath(int n, int m) {
+        if (n <= 0) {
+            throw new RuntimeException("n argument should be more than zero");
+        }
+        if (m <= 0) {
+            throw new RuntimeException("m argument should be more than zero");
+        }
+
         int step = m - 1;
         ArrayList<Integer> path = new ArrayList<>(n);
 
