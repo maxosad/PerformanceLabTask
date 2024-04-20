@@ -46,6 +46,16 @@ class Task1Test {
                         "1",
                         1,
                         5
+                ),
+                Arguments.of(
+                        "1",
+                        3,
+                        10
+                ),
+                Arguments.of(
+                        "13579",
+                        10,
+                        3
                 )
         );
     }
