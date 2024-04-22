@@ -32,13 +32,19 @@ public class Task1 {
                 .collect(Collectors.joining());
     }
     public static void main(String[] args) {
+        if (args.length != 2) {
+            System.out.println("program should have 2 arguments");
+            return;
+        }
         int n = Integer.parseInt(args[0]);
         if (n <= 0) {
-            throw new RuntimeException("n argument should be more than zero");
+            System.out.println("n argument should be more than zero");
+            return;
         }
         int m = Integer.parseInt(args[1]);
         if (m <= 0) {
-            throw new RuntimeException("m argument should be more than zero");
+            System.out.println("m argument should be more than zero");
+            return;
         }
         Task1 task1 = new Task1();
 
