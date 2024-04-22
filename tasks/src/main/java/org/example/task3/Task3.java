@@ -44,11 +44,15 @@ public class Task3 {
 
 
     public static void main(String[] args) {
-        Task3 task3 = new Task3();
-
+        if (args.length != 3) {
+            System.out.println("program should have three arguments");
+            return;
+        }
         Path valuePath = Paths.get(args[0]);
         Path testPath = Paths.get(args[1]);
         Path reportPath = Paths.get(args[2]);
+
+        Task3 task3 = new Task3();
 
         try (FileReader valuesReader = new FileReader(valuePath.toFile());
              FileReader testReader = new FileReader(testPath.toFile());
