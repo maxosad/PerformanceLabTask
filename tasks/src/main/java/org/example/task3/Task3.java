@@ -76,7 +76,7 @@ public class Task3 {
             reportMapper.writeValue(reportWriter, testRoot);
 
         } catch (IOException e) {
-            System.out.println("IOException" + e);
+            System.out.println(e.getMessage());
         }
     }
 }
